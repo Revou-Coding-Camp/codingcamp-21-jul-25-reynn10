@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>To-do List</h1>
+    </header>
+    <main>
+        <section id="todo-add">
+            <input type="text" id="todo-input" placeholder="Add a new task" required/>
+            <input type="date" id="date-input" required/>
+            <button type="button" onclick="addItem()" class="send-todo">Kirim</button>
+        </section>
+        
+        <section class="list">
+            <div class="controls">
+            <div class="dropdown">
+                <button class="dropbtn">Filter ▾</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="filterTodos('all')">Semua</a>
+                    <a href="#" onclick="filterTodos('undone')">Belum Selesai</a>
+                    <a href="#" onclick="filterTodos('done')">Selesai</a>
+                </div>
+            </div>
+
+            <button class="deleteAll" onclick="deleteAll()">Hapus</button>
+            </div>
+
+            <ul id="todo-list">
+                <li>Tidak ada tugas</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
